@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Setup
+
+### Getting your Gemini API key (free):
+1. Go to [aistudio.google.com](https://aistudio.google.com)
+2. Sign in with Google
+3. Click "Get API Key" → "Create API Key"
+4. Copy the key → paste into `.env.local` as `GEMINI_API_KEY`
+
+**Free tier limits**: 15 requests/minute, 1500 requests/day — sufficient for development and moderate production usage. No credit card required.
