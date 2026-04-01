@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0D0F14;
+  --color-foreground: #FFFFFF;
+  --color-cyan-vibrant: #00E5FF;
+  --color-dark-surface: #1A1D23;
+  --color-dark-border: #2D323B;
+  
+  --font-syne: var(--font-syne);
+  --font-dmsans: var(--font-dmsans);
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0D0F14;
+  --foreground: #FFFFFF;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dmsans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-syne {
+  font-family: var(--font-syne), sans-serif;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(26, 29, 35, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cyan-glow {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.cyan-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+  border-color: #00E5FF;
+}
+
+/* Dot Grid Background Texture */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
